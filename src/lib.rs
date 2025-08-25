@@ -5,14 +5,14 @@
 use chess::{Board, ChessMove};
 
 /// Trait that chess engines can implement.
-pub trait ChessEngine {
+pub trait ChessEngine: Default {
     /// Name of the engine
     const NAME: &'static str;
     /// Authors of the engine
     const AUTHORS: [&'static str];
     /// Version of the engine
     const VERSION: &'static str;
-    
+
     /// This function will be used to let the engines make moves in the game.
-    fn next_move(&mut self, board: Board) -> ChessMove;
+    fn next_move(&mut self, board: &Board) -> ChessMove;
 }
