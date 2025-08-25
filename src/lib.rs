@@ -3,18 +3,24 @@
 //! implement when making our engines.
 
 use chess::{Board, ChessMove};
+use std::time::Duration;
 
 /// Trait that chess engines can implement.
 pub trait ChessEngine: Default {
     /// Name of the engine
     const NAME: &'static str;
-    
+
     /// Authors of the engine, colon-separated.
     const AUTHORS: &'static str;
-    
+
     /// Version of the engine
     const VERSION: &'static str;
 
     /// This function will be used to let the engines make moves in the game.
-    fn next_move(&mut self, board: &Board) -> ChessMove;
+    fn next_move(
+        &mut self,
+        board: &Board,
+        remaining_time: Duration,
+        increment: Duration,
+    ) -> ChessMove;
 }
