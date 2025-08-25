@@ -8,8 +8,10 @@ use chess::{Board, ChessMove};
 pub trait ChessEngine: Default {
     /// Name of the engine
     const NAME: &'static str;
-    /// Authors of the engine
-    const AUTHORS: [&'static str];
+    
+    /// Authors of the engine, colon-separated.
+    const AUTHORS: &'static str;
+    
     /// Version of the engine
     const VERSION: &'static str;
 
