@@ -1,0 +1,38 @@
+[package]
+name = "chess-interface"
+version = "0.1.0"
+edition = "2024"
+description = "Rust Library for a small chess engine competition"
+license-file = "LICENSE"
+repository = "https://github.com/Sietse2202/chess-interface"
+readme = "README.md"
+keywords = ["chess"]
+categories = []
+
+[dependencies]
+chess = "3.2.0"
+
+[lints.rust]
+unsafe_code = "deny"
+missing_docs = "deny"
+missing_debug_implementations = "deny"
+unused_must_use = "deny"
+unreachable_patterns = "warn"
+
+[lints.clippy]
+unwrap_used = { level = "deny", priority = 1 }
+expect_used = { level = "deny", priority = 1 }
+allow_attributes = { level = "deny", priority = 1 }
+correctness = "deny"
+nursery = "deny"
+suspicious = "deny"
+complexity = "deny"
+style = "deny"
+needless_pass_by_value = { level = "allow", priority = 1 }
+perf = "deny"
+cargo = "deny"
+pedantic = "warn"
+dbg_macro = { level = "warn", priority = 1 }
+todo = { level = "warn", priority = 1 }
+unimplemented = { level = "warn", priority = 1 }
+print_stdout = { level = "warn", priority = 1 }
