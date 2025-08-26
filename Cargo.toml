@@ -1,6 +1,6 @@
 [package]
 name = "chess-interface"
-version = "0.4.0"
+version = "0.5.0-beta.1"
 edition = "2024"
 description = "Rust Library for a small chess engine competition"
 license-file = "LICENSE"
@@ -11,6 +11,11 @@ categories = []
 
 [dependencies]
 chess = "3.2.0"
+
+[features]
+implementer = []
+user = []
+default = ["implementer"]
 
 [lints.rust]
 unsafe_code = "deny"
