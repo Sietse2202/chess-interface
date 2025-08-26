@@ -5,6 +5,9 @@
 #[cfg(all(feature = "implementer", feature = "user"))]
 compile_error!("You can't have both `implementer` and `user` features enabled.");
 
+#[cfg(not(any(feature = "implementer", feature = "user")))]
+compile_error!("You can't have both `implementer` and `user` features disabled.");
+
 use std::sync::Arc;
 use std::sync::atomic::AtomicBool;
 use chess::{Board, ChessMove};
